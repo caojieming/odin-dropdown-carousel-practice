@@ -1,8 +1,8 @@
 import "./styles.css";
-import { greeting } from "./models/model.js";
-import { createImg } from "./views/view.js";
+// import { greeting } from "./models/model.js";
+import { toggleDropdown } from "./views/view.js";
 
 export function init() {
-    console.log(greeting);
-    createImg();
+    const dropBtn = document.querySelector(".drop-btn");
+    dropBtn.addEventListener("click", toggleDropdown);
 }

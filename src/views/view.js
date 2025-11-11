@@ -1,7 +1,9 @@
-import exampleImage from "../assets/img/example.jpeg";
+// import exampleImage from "../assets/img/example.jpeg";
 
-export function createImg() {
-    const image = document.createElement("img");
-    image.src = exampleImage;
-    document.body.appendChild(image);
+export function toggleDropdown() {
+    const dropBtn = document.querySelector(".drop-btn");
+    const dropContent = document.querySelector(".drop-content");
+    
+    dropBtn.classList.toggle("drop-btn-active");
+    dropContent.classList.toggle("show");
 }
