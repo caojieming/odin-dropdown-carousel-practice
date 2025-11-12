@@ -1,18 +1,22 @@
 /* for dev purposes */
 * {
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
+	margin: 0px;
 }
 
 /* split page into 2 sections, 1 for dropdown menu, 1 for image carousel */
+/* also basic margins */
 #content {
 	display: flex;
 	gap: 4px;
 }
 .dropdown {
 	width: 50%;
+	margin: 4px;
 }
 .carousel {
 	width: 50%;
+	margin: 4px;
 }
 
 
@@ -64,14 +68,14 @@
 
 /* carousel */
 .carousel {
-	/* max-width: 1000px; */
+	max-width: 50%;
   	position: relative;
-  	margin: auto;
 }
 
 /* hides all slides by default */
 .carousel .slide {
-  	/* display: none; */
+	position: relative;
+  	display: none;
 }
 
 /* next and previous buttons */
@@ -85,7 +89,7 @@
 	color: white;
 	font-weight: bold;
 	font-size: 18px;
-	/* transition: 0.5s ease; */
+	transition: 0.5s ease;
 	user-select: none;
 }
 .prev {
@@ -96,16 +100,24 @@
 	border-radius: 3px 0 0 3px;
 }
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  	background-color: rgba(0,0,0,0.8);
+}
+
+/* picture */
+.carousel .slide .pic {
+	width: 100%;
+	height: 90%;
 }
 
 /* captions */
-.text {
+.caption {
 	color: #f2f2f2;
+	background-color: rgba(0,0,0,0.6);
 	font-size: 15px;
-	padding: 8px 12px;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	position: absolute;
-	bottom: 8px;
+	bottom: 1%;
 	width: 100%;
 	text-align: center;
 }
@@ -119,8 +131,9 @@
 	background-color: #bbb;
 	border-radius: 50%;
 	display: inline-block;
-	/* transition: background-color 0.5s ease; */
+	transition: background-color 0.5s ease;
 }
+/* darkens dot bg color if hovered over or active class is added */
 .active, .dot:hover {
   	background-color: #717171;
 }
@@ -129,9 +142,9 @@
 /* fade animation */
 .fade {
 	animation-name: fade;
-	animation-duration: 1.5s;
+	animation-duration: 1.0s;
 }
 @keyframes fade {
-	from {opacity: .4}
+	from {opacity: .1}
 	to {opacity: 1}
 }

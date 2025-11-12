@@ -1,5 +1,3 @@
-// import exampleImage from "../assets/img/example.jpeg";
-
 export function toggleDropdown() {
     const dropBtn = document.querySelector(".drop-btn");
     const dropContent = document.querySelector(".drop-content");
